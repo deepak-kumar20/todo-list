@@ -1,0 +1,217 @@
+/* Reset some default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Set font for the whole page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;  /* Light gray background */
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #d9534f;  /* Red background */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+/* Navigation styles */
+nav {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;  /* Make nav items flex */
+    justify-content: center;  /* Center the nav items horizontally */
+    align-items: center;  /* Align the items vertically */
+}
+
+nav a {
+    text-decoration: none;
+    color: #d9534f;  /* Red text */
+    font-size: 1.2em;
+    margin: 0 20px;  /* Adds horizontal spacing between links */
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #d9534f;  /* Red background on hover */
+    color: white;
+    border-radius: 5px;
+}
+
+/* Main Todo container */
+.main-container {
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and button styling for adding todos */
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 75%; /* Increased width of input box */
+    padding: 15px;  /* Increased padding for taller input */
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    font-size: 1.3em;  /* Increased font size */
+    outline: none;
+    transition: border-color 0.3s ease;
+    min-height: 50px; /* Ensure a taller input field */
+}
+
+input[type="text"]:focus {
+    border-color: #d9534f;  /* Change border color to red on focus */
+}
+
+button {
+    width: 20%; /* Increased width of the button */
+    padding: 15px;  /* Increased padding for taller button */
+    background-color: #d9534f;  /* Red background */
+    border: none;
+    color: white;
+    font-size: 1.3em;  /* Increased font size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-height: 50px;  /* Taller button */
+}
+
+button:hover {
+    background-color: #c9302c;  /* Darker red on hover */
+}
+
+/* Todo list styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin: 12px 0;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Styling the delete button */
+li button {
+    background-color: #d9534f;  /* Red background color */
+    padding: 8px 12px;
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li button:hover {
+    background-color: #c9302c;  /* Darker red on hover */
+}
+
+li button:focus {
+    outline: none;  /* Remove outline on focus */
+    box-shadow: 0 0 5px rgba(217, 83, 72, 0.8);  /* Add a glow effect on focus */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;  /* Full width for smaller screens */
+    }
+
+    button {
+        width: 100%;  /* Full width for smaller screens */
+    }
+}
+
+
+/* Styling the Todo list items */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin: 12px 0;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* Styling the delete button */
+li button {
+    background-color: #d9534f;  /* Red background color */
+    padding: 10px 20px;  /* Adjust padding to make the button bigger */
+    border: none;
+   
+    font-size: 1.1em;
+    font-weight: bold;  /* Make the text bold */
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;  /* Remove width restriction */
+    transition: background-color 0.3s ease;
+    min-width: 100px;  /* Ensures button has a minimum width */
+    text-align: center;  /* Ensure text is centered */
+}
+
+li button:hover {
+    background-color: #c9302c;  /* Darker red on hover */
+}
+
+li button:focus {
+    outline: none;  /* Remove outline on focus */
+    box-shadow: 0 0 5px rgba(217, 83, 72, 0.8);  /* Add a glow effect on focus */
+}
+li  {
+    font-size: 1.8em;  /* Increased size of the todo text */
+    font-weight: bold;
+    color: rgb(216, 238, 18);  /* Ensure the text is white */
+    background-color: rgb(4, 4, 4);
+}

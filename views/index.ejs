@@ -1,0 +1,23 @@
+<h2 align="center">My Todo List</h2>
+<!-- In your EJS or HTML file -->
+<link rel="stylesheet" href="/style.css">
+
+<!-- Form to add a new todo -->
+<form action="/add" method="POST">
+  <input type="text" name="task" placeholder="New task" required>
+  <button type="submit">Add Todo</button>
+</form>
+
+<ul>
+  <% todos.forEach(todo => { %>
+    <li>
+      <%= todo.task %>
+      
+    
+      <form action="/delete" method="POST" style="display:inline;">
+        <input type="hidden" name="todoId" value="<%= todo._id %>">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  <% }); %>
+</ul>
